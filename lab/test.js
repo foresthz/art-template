@@ -1,5 +1,6 @@
 
-const template = require('../lib/index');
+// const
+var template = require('../lib/index');
 // alert('hi')
 
-window.template = template
+window.template = template;
