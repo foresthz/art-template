@@ -3,6 +3,14 @@ const webpack = require('webpack');
 const packageInfo = require('./package.json');
 const version = packageInfo.version;
 
+console.info(`process.env.NODE_ENV: ${process.env.NODE_ENV}`);
+// console.info(`process.env.PATH: ${process.env.PATH}`);
+
+if(process.env.NODE_ENV === 'production') {
+    console.info('in production');
+} else {
+    console.info('not in production');
+}
 
 module.exports = {
     target: 'web',
