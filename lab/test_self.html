@@ -1,1 +1,25 @@
 <script type="text/javascript" src="../lib/template-web.js"></script>
+
+<div id="table"></div>
+
+<script type="template" id="tpl_table">
+<ul>
+    <%for (let i=0;i<names.length;i++) {%>
+        <li><%= names[i]%></li>
+    <%}%>
+</ul>
+</script>
+
+<script>
+
+let names = [
+    '兴来醉倒落花前，天地即为衾枕。',
+    '机息坐忘盘石上，古今尽属蜉蝣。',
+    '蓬茅下诵诗读书，日日与圣贤晤语，谁云贫是病？',
+    '樽罍边幕天席地，时时共造化氤氲，孰谓非禅？'
+];
+
+let tpl_table = document.getElementById('tpl_table').innerText;
+let table_html = template.render(tpl_table, { names: names });
+document.querySelector('#table').innerHTML = table_html;
+</script>
