@@ -1,4 +1,6 @@
-<script type="text/javascript" src="../lib/template-web.js"></script>
+<!-- <script type="text/javascript" src="../lib/template-web.js"></script> -->
+
+<script src="art_main.js"></script>
 
 <div id="table"></div>
 
@@ -20,6 +22,9 @@ let names = [
 ];
 
 let tpl_table = document.getElementById('tpl_table').innerText;
+
+template.defaults.debug = true;
+debugger;
 let table_html = template.render(tpl_table, { names: names });
 document.querySelector('#table').innerHTML = table_html;
 </script>
